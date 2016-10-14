@@ -48,7 +48,7 @@ class Recipe(recipe.Recipe):
     # Dependencies used in the dynamic (shared) build of OWRTC
     _dynamic_deps = ['libnice', 'gstreamer-1.0', 'gst-plugins-base-1.0',
                      'gst-plugins-good-1.0', 'gst-plugins-bad-1.0',
-                     'openwebrtc-gst-plugins']
+                     'gst-plugins-ugly-1.0', 'openwebrtc-gst-plugins']
     # Dependencies used only in the static build of OWRTC
     _static_deps = [i + '-static' for i in _dynamic_deps] + \
                    ['openwebrtc-girepository']
@@ -120,11 +120,11 @@ class Recipe(recipe.Recipe):
                 'nice', 'opengl', 'openh264', 'opus', 'rtp', 'rtpmanager', 'scream',
                 'sctp', 'srtp', 'videocrop', 'videofilter', 'videoparsersbad',
                 'videorate', 'videorepair', 'videoscale', 'videotestsrc',
-                'volume', 'vpx', 'videoconvert']
+                'volume', 'vpx', 'videoconvert', 'x264', 'isomp4', 'matroska']
             if self.config.target_platform == Platform.IOS:
                 gst_plugins += ['ercolorspace']
             if self.config.target_platform == Platform.ANDROID:
-                gst_plugins += ['androidvideosrc', 'opensles']
+                gst_plugins += ['androidvideosrc', 'opensles', 'androidmedia']
             else:
                 gst_plugins += ['applemedia', 'osxaudio']
             # Convert the array of plugin names to a string of library names

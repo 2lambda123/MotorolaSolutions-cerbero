@@ -22,6 +22,8 @@ class Recipe(custom.GStreamerStatic):
              'libgstalaw',
              'libgstmulaw',
              'libgstvpx',
+             'libgstisomp4',
+             'libgstmatroska',
     ]
 
     files_plugins_net_devel = [

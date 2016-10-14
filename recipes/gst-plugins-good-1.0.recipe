@@ -25,6 +25,8 @@ class Recipe(recipe.Recipe, custom.GStreamer):
              'lib/gstreamer-1.0/libgstalaw%(mext)s',
              'lib/gstreamer-1.0/libgstmulaw%(mext)s',
              'lib/gstreamer-1.0/libgstvpx%(mext)s',
+             'lib/gstreamer-1.0/libgstisomp4%(mext)s',
+             'lib/gstreamer-1.0/libgstmatroska%(mext)s',
     ]
 
     files_plugins_net = [
