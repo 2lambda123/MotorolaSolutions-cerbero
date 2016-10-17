@@ -114,7 +114,8 @@ class Recipe(recipe.Recipe):
                 'nice', 'opengl', 'openh264', 'opus', 'rtp', 'rtpmanager',
                 'sctp', 'srtp', 'videocrop', 'videofilter', 'videoparsersbad',
                 'videorate', 'videorepair', 'videoscale', 'videotestsrc',
-                'volume', 'vpx', 'videoconvert', 'isomp4', 'matroska']
+                'volume', 'vpx', 'videoconvert', 'isomp4', 'matroska',
+                'typefindfunctions']
             if self.config.target_platform == Platform.IOS:
                 gst_plugins += ['ercolorspace']
             if self.config.target_platform == Platform.ANDROID:
