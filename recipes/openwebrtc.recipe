@@ -114,11 +114,11 @@ class Recipe(recipe.Recipe):
                 'nice', 'opengl', 'openh264', 'opus', 'rtp', 'rtpmanager',
                 'sctp', 'srtp', 'videocrop', 'videofilter', 'videoparsersbad',
                 'videorate', 'videorepair', 'videoscale', 'videotestsrc',
-                'volume', 'vpx', 'videoconvert']
+                'volume', 'vpx', 'videoconvert', 'isomp4', 'matroska']
             if self.config.target_platform == Platform.IOS:
                 gst_plugins += ['ercolorspace']
             if self.config.target_platform == Platform.ANDROID:
-                gst_plugins += ['androidvideosrc', 'opensles']
+                gst_plugins += ['androidvideosrc', 'opensles', 'androidmedia']
             else:
                 gst_plugins += ['applemedia', 'osxaudio']
             # Convert the array of plugin names to a string of library names

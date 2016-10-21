@@ -35,6 +35,7 @@ class Recipe(custom.GStreamerStatic):
 
     platform_files_plugins_codecs_devel = {
         Platform.ANDROID: [
+             'libgstandroidmedia',
             ]
     }
 

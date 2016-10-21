@@ -46,8 +46,9 @@ class Recipe(recipe.Recipe):
     ]
 
     platform_files_plugins_codecs = {
-        Platform.ANDROID: [
-            ]
+         Platform.ANDROID: [
+             'lib/gstreamer-1.0/libgstandroidmedia%(mext)s',
+              ]
     }
 
     files_plugins_codecs_gpl = [
