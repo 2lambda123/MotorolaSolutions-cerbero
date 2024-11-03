@@ -21,6 +21,7 @@ import subprocess
 import os
 
 from cerbero.errors import FatalError
+from security import safe_command
 
 class PkgConfig(object):
     '''
@@ -99,7 +100,7 @@ class PkgConfig(object):
 
     @staticmethod
     def _call(cmd, delimiter=None):
-        process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+        process = safe_command.run(subprocess.Popen, cmd, shell=True, stdout=subprocess.PIPE)
         output, unused_err = process.communicate()
         output = output.strip()
         if delimiter:
